@@ -1,7 +1,7 @@
 var readlineSync = require('readline-sync');
 var firstNumber = readlineSync.questionInt("Please enter your first number: ");
 var secondNumber = readlineSync.questionInt("Please enter your second number: ");
-var enteredOperator = readlineSync.question("Please enter the operation to perform: add, sub, mul, div.node ");
+var enteredOperator = readlineSync.question("Please enter the operation to perform: add, sub, mul, div ");
 
 function addTwoNumbers(firstNumber, secondNumber){
     return firstNumber + secondNumber;
@@ -21,13 +21,13 @@ function calculator(firstNumber, secondNumber, enteredOperator){
        console.log("Addition of number-1: " + firstNumber + " and number-2: " + secondNumber + " results in: " + addTwoNumbers(firstNumber, secondNumber));
     }
     else if(enteredOperator == "sub"){
-        console.log("Subtraction of number-1: " + firstNumber + "and number-2: " + secondNumber + "results in: " + subTwoNumbers(firstNumber, secondNumber));
+        console.log("Subtraction of number-1: " + firstNumber + "and number-2: " + secondNumber + " results in: " + subTwoNumbers(firstNumber, secondNumber));
     }
     else if(enteredOperator == "mul"){
-        console.log("Multiplication of number-1: " + firstNumber +"and number-2: " + secondNumber + "results in: " + mulTwoNumbers(firstNumber, secondNumber));
+        console.log("Multiplication of number-1: " + firstNumber +"and number-2: " + secondNumber + " results in: " + mulTwoNumbers(firstNumber, secondNumber));
     }
     else if(enteredOperator == "div"){
-        console.log("Division of number-1: " + firstNumber + " and number-2: " +secondNumber + "results in: " + divTwoNumbers(firstNumber, secondNumber));
+        console.log("Division of number-1: " + firstNumber + " and number-2: " +secondNumber + " results in: " + divTwoNumbers(firstNumber, secondNumber));
     }
     else {
         console.log("The entered operator is not recognized. Please enter: add, sub, mul, or div");
