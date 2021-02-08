@@ -16,6 +16,7 @@ readlineSync.question(`Hello ${name}, You have wandered into my Labryinth. May y
 
 const enemies = ['Minotaur', 'Harpie', 'Sphinx', 'Mummy'];
 const treasure = ['Health Kit', '50 gold', 'Sword', 'Magic Wand'];
+var prize = [];
 let playerHealth = 50;
 const menu = ['Walk', 'Abandon', 'Backpack'];
 let collected = treasure[Math.floor(Math.random()*treasure.length)];
@@ -60,6 +61,10 @@ function game(){
                             console.log(`You were attacked for ${enemyPower} damage.`);
                             if (enemyHealth <= 0){
                                 console.log(`You have killed the ${enemy} and found ${collected}.`);
+                                let loot = Math.random();
+                                if (loot <= .3){
+                                    prize.push(collected);
+                                }
                                 }
                             else if (playerHealth <= 0){
                                 console.log(`${enemy} has killed ${name}. GAME OVER`);
